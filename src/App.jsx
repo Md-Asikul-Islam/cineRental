@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Components/Header";
 import SideBar from "./Components/SideBar";
+import Footer from './Components/Footer';
+import MovieList from "./movieBox/MovieList";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
           <SideBar />
         </div>
       </main>
+      <MovieList />
+      <Footer />
     </div>
   );
 }
