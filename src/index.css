@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+@theme {
+  --color-primary: #ea5b6f;
+  --color-secondary: #ffcb61;
+}
