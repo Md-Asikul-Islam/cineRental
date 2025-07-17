@@ -3,14 +3,31 @@ import React, { useState } from "react";
 import tag from '../assets/tag.svg'
 import { getImageUrl } from './../utils/utility'; 
 import Favorite from "./Favorite";
+import MovieDeatails from "./MovieDeatails";
 function MovieCard({movie}) {
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
+  const handleModalClose = () => {
+    setSelectedMovie(null)
+    setShowModal(false)
+  }
+
+  const handleMovieSeclection =(movie) =>{
+   setSelectedMovie(movie)
+   setShowModal(true)
+  }
+
   return (
+    <>
+    {showModal && <MovieDeatails 
+     movie={selectedMovie}
+     onCloseModal={handleModalClose}
+     />}
     <figure className="p-4 border border-black/10 shadow-sm dark:border-white/10 rounded-xl">
-       {}
-      <a
-      
-      >
+     <a 
+      onClick={() => handleMovieSeclection(movie)}
+      href="#" >
       <img className="w-full object-cover" src={getImageUrl(movie.cover)}  alt={movie.title} />
       <figcaption className="pt-4">
         <h3 className="text-xl mb-1"> {movie.title} </h3>
@@ -27,6 +44,7 @@ function MovieCard({movie}) {
       </figcaption>
       </a>
     </figure>
+    </>
   );
 }
 
