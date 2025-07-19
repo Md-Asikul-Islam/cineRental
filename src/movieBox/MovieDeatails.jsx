@@ -24,7 +24,7 @@ function MovieDeatails({movie, onCloseModal, onCartAdd}) {
             </p>
             <div className="grid lg:grid-cols-2 gap-2">
               <a onClick={(e) => onCartAdd(e, movie)}
-                className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
+                className=" bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
                 href="#"
               >
                 <img src={tag} alt="tag" />

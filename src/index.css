@@ -6,9 +6,28 @@
   *::after {
     box-sizing: border-box;
   }
+
+  html {
+    @apply bg-white text-black;
+  }
+
+  html.dark {
+    background: #171923;
+    color: white;
+  }
 }
 
-@theme {
+:root {
   --color-primary: #00D991;
   --color-secondary: #ffcb61;
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
 }
