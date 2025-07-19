@@ -40,7 +40,7 @@ function MovieCard({ movie }) {
   return (
     <>
       {showModal && (
-        <MovieDeatails movie={selectedMovie} onCloseModal={handleModalClose} />
+        <MovieDeatails movie={selectedMovie} onCloseModal={handleModalClose} onCartAdd={handleAddToCart} />
       )}
       <figure className="p-4 border border-black/10 shadow-sm dark:border-white/10 rounded-xl">
         <a onClick={() => handleMovieSeclection(movie)} href="#">
